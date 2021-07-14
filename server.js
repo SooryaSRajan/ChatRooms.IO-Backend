@@ -5,7 +5,7 @@ const server = http.createServer(app);
 const cors = require('cors')
 app.use(cors())
 let myMap = new Map();
-const port = process.env.PORT | 4040
+const PORT = process.env.PORT || 8000;
 
 /**
  * Socket initialized
