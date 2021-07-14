@@ -5,7 +5,7 @@ const server = http.createServer(app);
 const cors = require('cors')
 app.use(cors())
 let myMap = new Map();
-const PORT = process.env.PORT || 8000;
+const port = process.env.PORT || 4040;
 
 /**
  * Socket initialized
@@ -82,5 +82,5 @@ io.on('connection', (socket) => {
 });
 
 server.listen(port, () => {
-    console.log('listening on *:4040');
+    console.log('listening on: ', port);
 });
